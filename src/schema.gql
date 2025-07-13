@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: Int
+  name: String
+  age: Int
+}
+
+type Query {
+  get_user(id: Int!): User
+  get_users: [User!]
+}
+
+type Mutation {
+  create_user(payload: CreateUserDto!): User
+  update_user(id: Int!, payload: UpdateUserDto!): User
+  delete_user(id: Int!): User
+}
+
+input CreateUserDto {
+  name: String!
+  age: Int!
+}
+
+input UpdateUserDto {
+  name: String
+  age: Int
+}
