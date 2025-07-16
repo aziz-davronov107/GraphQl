@@ -11,14 +11,5 @@ model User {
   id    Int     @default(autoincrement()) @id
   name String
   age Int
-  posts Post[]
   @@map("users")
-}
-model Post{
-  id    Int     @default(autoincrement()) @id
-  title String
-  body String
-  author User @relation(fields: [authorId],references: [id])
-  authorId Int
-  @@map("posts")
 }
